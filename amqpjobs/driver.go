@@ -458,7 +458,7 @@ func (d *Driver) State(ctx context.Context) (*jobs.State, error) {
 		}
 
 		// verify or declare a queue
-		q, err := stateCh.QueueDeclarePassive(
+		q, err := stateCh.QueueDeclare(
 			d.queue,
 			d.durable,
 			d.queueAutoDelete,
